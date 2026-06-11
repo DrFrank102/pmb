@@ -206,16 +206,13 @@ body.home article.type-page {
 
 .pmb-hero {
 	position: relative;
-	background: var(--pmb-navy);
+	background-color: var(--pmb-navy);
 	background-image:
-		repeating-linear-gradient(
-			-55deg,
-			transparent,
-			transparent 28px,
-			rgba(255,255,255,0.025) 28px,
-			rgba(255,255,255,0.025) 56px
-		),
-		linear-gradient(160deg, #1a3a5c 0%, #0f2336 100%);
+		linear-gradient(160deg, rgba(26,58,92,0.78) 0%, rgba(15,35,54,0.85) 100%),
+		url('https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-hero.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	padding: 100px 0 90px;
 	overflow: hidden;
 }
@@ -232,10 +229,7 @@ body.home article.type-page {
 }
 
 .pmb-hero__diagonal {
-	position: absolute;
-	inset: 0;
-	background: radial-gradient(ellipse at 70% 50%, rgba(42, 96, 148, 0.35) 0%, transparent 65%);
-	pointer-events: none;
+	display: none;
 }
 
 .pmb-hero__inner {
