@@ -18,7 +18,7 @@
    ============================================================================= */
 
 :root {
-	--pmb-header-bg: #1a3a5c;
+	--pmb-header-bg: #000000;
 }
 
 /* =============================================================================
@@ -47,8 +47,12 @@
 	}
 }
 
+#masthead {
+	background-color: #000000 !important;
+}
+
 #masthead .custom-logo {
-	max-height: 50px;
+	max-height: 100px;
 	width: auto;
 	border-radius: 8px;
 }
