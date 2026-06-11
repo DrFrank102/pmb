@@ -514,10 +514,10 @@ body.home article.type-page {
 
 .pmb-emergency__layout {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
-	gap: 48px;
-	flex-wrap: wrap;
+	gap: 32px;
+	text-align: center;
 }
 
 .pmb-emergency__heading {
@@ -535,6 +535,7 @@ body.home article.type-page {
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	gap: 10px 24px;
 }
 
@@ -807,14 +808,6 @@ body.home article.type-page {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	.pmb-emergency__layout {
-		flex-direction: column;
-		text-align: center;
-	}
-
-	.pmb-emergency__list {
-		justify-content: center;
-	}
 }
 
 @media (max-width: 680px) {
