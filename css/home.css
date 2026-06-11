@@ -504,8 +504,13 @@ body.home article.type-page {
 /* ═══════════════════════════════════════════════════════════════ EMERGENCY */
 
 .pmb-emergency {
-	background: var(--pmb-navy);
-	background-image: linear-gradient(135deg, var(--pmb-navy-deep) 0%, #1e4570 100%);
+	background-color: var(--pmb-navy);
+	background-image:
+		linear-gradient(135deg, rgba(15,35,54,0.82) 0%, rgba(26,58,92,0.78) 100%),
+		url('https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-EmergencyService.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	padding: 72px 0;
 }
 
