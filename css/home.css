@@ -110,6 +110,10 @@ body.home article.type-page {
 
 .pmb-eyebrow--light { color: rgba(255,255,255,0.65); }
 
+.pmb-emergency .pmb-eyebrow {
+	font-size: 1.1rem;
+}
+
 /* ── Buttons ───────────────────────────────────────────────────────────────── */
 
 .pmb-btn {
