@@ -526,11 +526,12 @@ body.home article.type-page {
 
 .pmb-emergency__heading {
 	font-family: var(--pmb-display);
-	font-size: clamp(2rem, 4vw, 2.8rem);
+	font-size: clamp(3rem, 5vw, 4rem);
 	font-weight: 800;
 	color: var(--pmb-white);
 	margin: 0 0 24px;
 	line-height: 1.05;
+	text-transform: uppercase;
 }
 
 .pmb-emergency__list {
@@ -545,10 +546,11 @@ body.home article.type-page {
 
 .pmb-emergency__list li {
 	color: rgba(255,255,255,0.85);
-	font-size: 0.95rem;
+	font-size: 1.9rem;
 	font-weight: 600;
 	padding-left: 20px;
 	position: relative;
+	text-transform: uppercase;
 }
 
 .pmb-emergency__list li::before {
