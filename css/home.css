@@ -541,23 +541,21 @@ body.home article.type-page {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 10px 24px;
+	align-items: center;
+	gap: 0;
 }
 
 .pmb-emergency__list li {
 	color: rgba(255,255,255,0.85);
 	font-size: 1.9rem;
 	font-weight: 600;
-	padding-left: 20px;
-	position: relative;
 	text-transform: uppercase;
 }
 
-.pmb-emergency__list li::before {
-	content: '→';
-	position: absolute;
-	left: 0;
-	color: var(--pmb-orange);
+.pmb-emergency__list li + li::before {
+	content: '•';
+	color: var(--pmb-white);
+	padding: 0 14px;
 }
 
 .pmb-emergency__action {
