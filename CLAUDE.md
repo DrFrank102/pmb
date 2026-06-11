@@ -31,6 +31,20 @@ New features follow this convention: one `.php` in `inc/`, one `.css` in `css/`,
 - CSS version uses `filemtime()` so browser cache is busted on every deploy
 - Page-specific stylesheets are conditionally enqueued in `functions.php`
 
+## Front page
+
+`front-page.php` is the home page template. WordPress uses it automatically when a static front page is configured:
+
+- WP Admin → Settings → Reading → "A static page"
+- Set **Front page** to any page (e.g. "Home")
+- `front-page.php` renders instead of the block editor content
+
+Content recreated from pmboisvertplumbing.com: hero, photo strip, about, brands, services grid, emergency callout, maintenance plan, reviews, contact form.
+
+Photo strip: upload 5 project photos to the WP Media Library and replace the `.pmb-strip__item--placeholder` divs in `front-page.php` with `<img src="..." alt="...">` tags.
+
+Google review link: update the `href` on the "Write a Review" button in `front-page.php` with the actual Google Place ID URL.
+
 ## Deployment
 
 ```bash

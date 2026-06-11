@@ -33,6 +33,16 @@ add_action( 'wp_enqueue_scripts', function () {
 		filemtime( get_stylesheet_directory() . '/css/footer.css' )
 	);
 
+	// ── Home page stylesheet ───────────────────────────────────────────────────
+	if ( is_front_page() ) {
+		wp_enqueue_style(
+			'kadence-child-home',
+			get_stylesheet_directory_uri() . '/css/home.css',
+			[ 'kadence-child-style' ],
+			filemtime( get_stylesheet_directory() . '/css/home.css' )
+		);
+	}
+
 } );
 
 // =============================================================================
