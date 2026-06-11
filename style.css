@@ -51,6 +51,11 @@
 	background-color: #000000 !important;
 }
 
+#masthead .site-branding {
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
 #masthead .custom-logo {
 	max-height: 100px;
 	width: auto;
