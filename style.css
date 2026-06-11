@@ -1,0 +1,76 @@
+/*
+ * **********************************************************************
+ Theme Name:   Kadence Child
+ Theme URI:    https://pmb.kelwynmanor.org
+ Description:  Child theme for Kadence — PMB
+ Author:       Kelwyn Manor
+ Template:     kadence
+ Version:      1.0.0
+ Last Updated: 2026-06-11
+ License:      GNU General Public License v3 or later
+ License URI:  https://www.gnu.org/licenses/gpl-3.0.html
+ Text Domain:  kadence-child
+ * **********************************************************************
+*/
+
+/* =============================================================================
+   Design tokens
+   ============================================================================= */
+
+:root {
+	--pmb-header-bg: #000000; /* TODO: set brand header colour */
+}
+
+/* =============================================================================
+   Logo
+   ============================================================================= */
+
+@media (min-width: 1025px) {
+	#masthead .site-branding     { margin-left:  30px; }
+	#masthead .header-navigation { margin-right: 30px; }
+}
+
+/* ── Nav submenu hover fix ───────────────────────────────────────────────────── */
+/* Kadence's JS closes submenus on mouseout before the cursor reaches them.
+   Force the submenu visible via CSS :hover on the parent <li> so it stays
+   open as long as the cursor is anywhere within the menu item. */
+@media (min-width: 1025px) {
+	.header-navigation li.menu-item-has-children:hover > ul.sub-menu {
+		display: block !important;
+		visibility: visible !important;
+		opacity: 1 !important;
+		pointer-events: auto !important;
+	}
+	.header-navigation li.menu-item-has-children > ul.sub-menu {
+		padding-top: 12px;
+		margin-top:  -12px;
+	}
+}
+
+#masthead .custom-logo {
+	max-height: 50px;
+	width: auto;
+	border-radius: 8px;
+}
+
+/* =============================================================================
+   Mobile menu toggle (hamburger)
+   ============================================================================= */
+
+/* Remove Kadence's default button background so the header colour shows through. */
+#masthead button.menu-toggle-open {
+	background: none;
+}
+
+/* SVG fill inherits via currentColor — force white so lines contrast on dark header. */
+#masthead button.menu-toggle-open .kadence-menu-svg path {
+	fill: white;
+}
+
+/* ── Header search icon ──────────────────────────────────────────────────────── */
+
+/* Scale the 1em×1em SVG up ~30% and force white to contrast against the header. */
+#masthead .search-toggle-open {
+	font-size: 1.3em;
+	color: #ffffff;
+}
