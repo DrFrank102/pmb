@@ -86,6 +86,10 @@
 	}
 }
 
+@media (max-width: 1024px) {
+	#masthead::after { display: none; }
+}
+
 #masthead::after {
 	content: '';
 	position: absolute;
