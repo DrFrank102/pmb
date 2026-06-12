@@ -3,7 +3,7 @@
 <main id="pmb-home" class="pmb-home">
 
 <!-- ═══════════════════════════════════════════════════ HERO -->
-<section class="pmb-hero">
+<section id="home" class="pmb-hero">
 	<div class="pmb-hero__diagonal"></div>
 	<div class="pmb-container">
 		<div class="pmb-hero__inner">
@@ -45,7 +45,7 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════ ABOUT -->
-<section class="pmb-about pmb-section">
+<section id="about" class="pmb-about pmb-section">
 	<div class="pmb-container pmb-about__layout">
 		<div class="pmb-about__copy">
 			<div class="pmb-eyebrow">About Us</div>
@@ -101,7 +101,7 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════ SERVICES -->
-<section class="pmb-services pmb-section">
+<section id="services" class="pmb-services pmb-section">
 	<div class="pmb-container">
 		<div class="pmb-eyebrow pmb-eyebrow--center">What We Do</div>
 		<h2 class="pmb-heading pmb-heading--center">Full-Service Plumbing<br>&amp; Mechanical</h2>
@@ -160,7 +160,7 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════ EMERGENCY -->
-<section class="pmb-emergency">
+<section id="emergency" class="pmb-emergency">
 	<div class="pmb-container pmb-emergency__layout">
 		<div class="pmb-emergency__copy">
 			<div class="pmb-eyebrow pmb-eyebrow--light">Always On Call</div>
@@ -184,7 +184,7 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════ PLAN -->
-<section class="pmb-plan pmb-section pmb-section--light">
+<section id="maintenance-plan" class="pmb-plan pmb-section pmb-section--light">
 	<div class="pmb-container pmb-plan__layout">
 		<div class="pmb-plan__intro">
 			<div class="pmb-eyebrow">Protect Your Home</div>
@@ -219,7 +219,7 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════ REVIEWS -->
-<section class="pmb-reviews pmb-section">
+<section id="reviews" class="pmb-reviews pmb-section">
 	<div class="pmb-container">
 		<div class="pmb-eyebrow pmb-eyebrow--center">Client Reviews</div>
 		<h2 class="pmb-heading pmb-heading--center">Trusted Across Greater Boston</h2>
