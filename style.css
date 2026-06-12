@@ -26,7 +26,8 @@
    ============================================================================= */
 
 @media (min-width: 1025px) {
-	#masthead .site-branding     { margin-left:  30px; }
+	/* Logo lives in #pmb-topbar on desktop — hide it from the sticky nav bar */
+	#masthead .site-branding     { display: none !important; }
 	#masthead .header-navigation { margin-right: 30px; }
 }
 
@@ -37,6 +38,8 @@
 
 #masthead .header-navigation li.menu-item > a {
 	color: #000000;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
 }
 
 /* ── Nav submenu hover fix ───────────────────────────────────────────────────── */
@@ -89,6 +92,16 @@
 	background-size: 100% 100%;
 	z-index: 100;
 	pointer-events: none;
+}
+
+/* Desktop: flash covers the full nav-only bar */
+@media (min-width: 1025px) {
+	#masthead::after {
+		width:  var( --pmb-flash-width,  100% );
+		height: var( --pmb-flash-height, 100% );
+		background-size: cover;
+		background-position: right center;
+	}
 }
 
 #masthead .site-branding {

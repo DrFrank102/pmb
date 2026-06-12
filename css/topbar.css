@@ -1,0 +1,116 @@
+/* =============================================================================
+   Top bar — logo + utility info strips (scrolls away on desktop)
+   ============================================================================= */
+
+#pmb-topbar {
+	background-color: #111111;
+	background-image: repeating-linear-gradient(
+		-45deg,
+		transparent 0,
+		transparent 4px,
+		rgba(255,255,255,0.025) 4px,
+		rgba(255,255,255,0.025) 5px
+	);
+	color: #ffffff;
+}
+
+.pmb-topbar__inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 30px;
+	max-width: 1600px;
+	margin: 0 auto;
+	gap: 20px;
+}
+
+/* ── Logo ──────────────────────────────────────────────────────────────────── */
+
+.pmb-topbar__logo a {
+	display: block;
+	line-height: 0;
+}
+
+.pmb-topbar__logo .custom-logo {
+	max-height: 80px;
+	width: auto;
+	border-radius: 6px;
+}
+
+.pmb-topbar__sitename {
+	font-size: 18px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+/* ── Info blocks ───────────────────────────────────────────────────────────── */
+
+.pmb-topbar__blocks {
+	display: flex;
+	align-items: center;
+	gap: 28px;
+}
+
+.pmb-topbar__block {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.pmb-topbar__icon {
+	width: 28px;
+	height: 28px;
+	flex-shrink: 0;
+	color: #5b9bd5;
+}
+
+.pmb-topbar__block-text {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.2;
+}
+
+.pmb-topbar__label {
+	font-size: 10px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: #aaaaaa;
+}
+
+.pmb-topbar__value {
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: #ffffff;
+}
+
+/* ── Book Now CTA ──────────────────────────────────────────────────────────── */
+
+.pmb-topbar__book {
+	display: inline-block;
+	padding: 10px 22px;
+	background-color: #4a7fa5;
+	color: #ffffff !important;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	text-decoration: none !important;
+	flex-shrink: 0;
+	transition: background-color 0.2s;
+}
+
+.pmb-topbar__book:hover {
+	background-color: #3a6f95;
+	color: #ffffff !important;
+}
+
+/* ── Mobile: hide top bar; logo stays in #masthead ─────────────────────────── */
+
+@media (max-width: 1024px) {
+	#pmb-topbar {
+		display: none;
+	}
+}
