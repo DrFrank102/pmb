@@ -12,11 +12,13 @@
 				<span class="pmb-pill">Woburn, MA</span>
 				<span class="pmb-pill">Available 24/7</span>
 			</div>
-			<img
-				src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-herotext.png"
-				alt="P.M. Boisvert Plumbing &amp; Mechanical — 3rd Generation Master Plumber, Greater Boston Area"
-				class="pmb-hero__title-img"
-			>
+		</div>
+		<img
+			src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-herotext.png"
+			alt="P.M. Boisvert Plumbing &amp; Mechanical — 3rd Generation Master Plumber, Greater Boston Area"
+			class="pmb-hero__title-img"
+		>
+		<div class="pmb-hero__inner">
 			<div class="pmb-hero__certs">
 				<span>MassSave Certified</span>
 				<span>NSS Certified</span>
