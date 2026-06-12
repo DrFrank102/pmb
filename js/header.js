@@ -10,9 +10,13 @@
 		var isDesktop      = window.innerWidth >= 1025;
 		var flashHeight, flashWidth;
 
+		// Reset transform before measuring so nav height is accurate
+		if ( nav ) { nav.style.transform = ''; }
+
 		if ( isDesktop ) {
-			// Desktop: flash starts at the right edge of the top-bar logo
-			flashHeight = mastheadHeight;
+			// Flash height = nav menu height + tight padding (8px total, 4px each side)
+			var navH = nav ? nav.getBoundingClientRect().height : 40;
+			flashHeight = navH + 8;
 			var topbarLogo = document.querySelector( '#pmb-topbar .pmb-topbar__logo' );
 			if ( topbarLogo ) {
 				flashWidth = mastheadRect.right - topbarLogo.getBoundingClientRect().right;
@@ -31,7 +35,6 @@
 
 		// Center the nav vertically within the flash zone
 		if ( nav ) {
-			nav.style.transform = '';
 			var navRect     = nav.getBoundingClientRect();
 			var navCenter   = ( navRect.top - mastheadRect.top ) + navRect.height / 2;
 			var flashCenter = mastheadHeight - flashHeight / 2;
