@@ -600,35 +600,11 @@ body.home article.type-page {
 
 /* ═══════════════════════════════════════════════════════════════════ BRANDS */
 
-.pmb-brands__layout {
-	padding: 36px 0;
-	text-align: center;
-}
-
-.pmb-brands__row {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	gap: 16px;
-	margin-top: 20px;
-}
-
-.pmb-brand {
-	font-family: var(--pmb-display);
-	font-size: 1.25rem;
-	font-weight: 700;
-	letter-spacing: 0.06em;
-	color: var(--pmb-navy);
-	padding: 14px 36px;
-	border: 2px solid var(--pmb-mid);
-	border-radius: var(--pmb-radius);
-	background: var(--pmb-white);
-	transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.pmb-brand:hover {
-	border-color: var(--pmb-blue);
-	box-shadow: var(--pmb-shadow);
+.pmb-brands__img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
 }
 
 /* ═══════════════════════════════════════════════════════════════ SERVICES */

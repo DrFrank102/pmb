@@ -183,14 +183,12 @@
 
 <!-- ═══════════════════════════════════════════════════ BRANDS -->
 <section class="pmb-brands pmb-section--light">
-	<div class="pmb-container pmb-brands__layout">
-		<div class="pmb-eyebrow">Brands We Service</div>
-		<div class="pmb-brands__row">
-			<div class="pmb-brand">Rinnai</div>
-			<div class="pmb-brand">Lochinvar</div>
-			<div class="pmb-brand">Navien</div>
-			<div class="pmb-brand">Ideal</div>
-		</div>
+	<div class="pmb-container">
+		<img
+			src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/Specialize_Full.png"
+			alt="Brands we specialize in"
+			class="pmb-brands__img"
+		>
 	</div>
 </section>
 
