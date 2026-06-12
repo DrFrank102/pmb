@@ -11,9 +11,14 @@
 		var flashHeight, flashWidth;
 
 		if ( isDesktop ) {
-			// Desktop: logo is in the top bar, flash fills the entire nav bar
+			// Desktop: flash starts at the right edge of the top-bar logo
 			flashHeight = mastheadHeight;
-			flashWidth  = mastheadRect.width;
+			var topbarLogo = document.querySelector( '#pmb-topbar .pmb-topbar__logo' );
+			if ( topbarLogo ) {
+				flashWidth = mastheadRect.right - topbarLogo.getBoundingClientRect().right;
+			} else {
+				flashWidth = mastheadRect.width * 0.80;
+			}
 		} else {
 			// Mobile: logo is in the masthead, flash covers the bottom 33%
 			if ( ! branding ) { return; }

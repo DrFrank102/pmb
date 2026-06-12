@@ -60,7 +60,14 @@
 }
 
 #masthead {
-	background-color: #000000 !important;
+	background-color: #111111 !important;
+	background-image: repeating-linear-gradient(
+		-45deg,
+		transparent 0,
+		transparent 4px,
+		rgba(255,255,255,0.025) 4px,
+		rgba(255,255,255,0.025) 5px
+	);
 	position: sticky !important;
 	top: 0;
 	overflow: visible;
@@ -94,13 +101,26 @@
 	pointer-events: none;
 }
 
-/* Desktop: flash covers the full nav-only bar */
+/* Desktop: flash covers the nav-only bar from the logo's right edge */
 @media (min-width: 1025px) {
 	#masthead::after {
-		width:  var( --pmb-flash-width,  100% );
+		width:  var( --pmb-flash-width,  80% );
 		height: var( --pmb-flash-height, 100% );
 		background-size: cover;
 		background-position: right center;
+	}
+
+	/* Compact nav — just enough blue above and below the menu text */
+	#masthead .header-navigation ul li > a {
+		padding-top:    6px !important;
+		padding-bottom: 6px !important;
+	}
+
+	#masthead .site-header-wrap,
+	#masthead .site-header-inner-wrap {
+		padding-top:    0 !important;
+		padding-bottom: 0 !important;
+		min-height:     0 !important;
 	}
 }
 
