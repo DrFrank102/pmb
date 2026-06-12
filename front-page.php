@@ -128,37 +128,37 @@
 			<h2 class="pmb-heading">A Tradition of<br>Master Craftsmanship</h2>
 			<p>Patrick Boisvert is a <strong>3rd generation Master Plumber</strong> with over 15 years of hands-on experience serving Woburn and the greater North Boston area. A certified MassSave contractor and factory-trained Navien technician, Patrick brings a family-first approach and unmatched work ethic to every job &mdash; large or small.</p>
 			<p>Whether it&rsquo;s a 2am emergency or a planned upgrade, P.M. Boisvert Plumbing &amp; Mechanical delivers the kind of honest, expert service that&rsquo;s been earned across three generations.</p>
+			<div class="pmb-about__creds">
+				<div class="pmb-cred-card">
+					<div class="pmb-cred-card__icon">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+					</div>
+					<div class="pmb-cred-card__name">Master Plumber</div>
+					<div class="pmb-cred-card__sub">Licensed &amp; Insured</div>
+				</div>
+				<div class="pmb-cred-card">
+					<div class="pmb-cred-card__icon">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+					</div>
+					<div class="pmb-cred-card__name">MassSave Certified</div>
+					<div class="pmb-cred-card__sub">Energy Efficiency</div>
+				</div>
+				<div class="pmb-cred-card">
+					<div class="pmb-cred-card__icon">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2"/></svg>
+					</div>
+					<div class="pmb-cred-card__name">NSS Certified</div>
+					<div class="pmb-cred-card__sub">Industry Standard</div>
+				</div>
+				<div class="pmb-cred-card">
+					<div class="pmb-cred-card__icon">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2c0 6-8 8-8 14a8 8 0 0016 0c0-6-8-8-8-14z"/></svg>
+					</div>
+					<div class="pmb-cred-card__name">Navien Technician</div>
+					<div class="pmb-cred-card__sub">Factory Trained</div>
+				</div>
+			</div>
 			<a href="tel:7814848550" class="pmb-btn pmb-btn--navy pmb-btn--mt">Call Us Today</a>
-		</div>
-		<div class="pmb-about__creds">
-			<div class="pmb-cred-card">
-				<div class="pmb-cred-card__icon">
-					<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-				</div>
-				<div class="pmb-cred-card__name">Master Plumber</div>
-				<div class="pmb-cred-card__sub">Licensed &amp; Insured</div>
-			</div>
-			<div class="pmb-cred-card">
-				<div class="pmb-cred-card__icon">
-					<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-				</div>
-				<div class="pmb-cred-card__name">MassSave Certified</div>
-				<div class="pmb-cred-card__sub">Energy Efficiency</div>
-			</div>
-			<div class="pmb-cred-card">
-				<div class="pmb-cred-card__icon">
-					<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2"/></svg>
-				</div>
-				<div class="pmb-cred-card__name">NSS Certified</div>
-				<div class="pmb-cred-card__sub">Industry Standard</div>
-			</div>
-			<div class="pmb-cred-card">
-				<div class="pmb-cred-card__icon">
-					<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2c0 6-8 8-8 14a8 8 0 0016 0c0-6-8-8-8-14z"/></svg>
-				</div>
-				<div class="pmb-cred-card__name">Navien Technician</div>
-				<div class="pmb-cred-card__sub">Factory Trained</div>
-			</div>
 		</div>
 	</div>
 </section>

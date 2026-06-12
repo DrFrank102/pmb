@@ -526,10 +526,7 @@ body.home article.type-page {
 /* ═══════════════════════════════════════════════════════════════════ ABOUT */
 
 .pmb-about__layout {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 72px;
-	align-items: start;
+	max-width: 780px;
 }
 
 .pmb-about__copy p {
@@ -543,9 +540,19 @@ body.home article.type-page {
 }
 
 .pmb-about__creds {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 16px;
+	display: none;
+}
+
+@media (min-width: 1025px) {
+	.pmb-about__creds {
+		display: flex;
+		gap: 16px;
+		margin: 28px 0 0;
+	}
+
+	.pmb-about__creds .pmb-cred-card {
+		flex: 1;
+	}
 }
 
 .pmb-cred-card {
