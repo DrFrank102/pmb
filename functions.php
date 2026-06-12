@@ -33,6 +33,15 @@ add_action( 'wp_enqueue_scripts', function () {
 		filemtime( get_stylesheet_directory() . '/css/footer.css' )
 	);
 
+	// ── Header JS (flash image alignment) ────────────────────────────────────
+	wp_enqueue_script(
+		'kadence-child-header',
+		get_stylesheet_directory_uri() . '/js/header.js',
+		[],
+		filemtime( get_stylesheet_directory() . '/js/header.js' ),
+		true
+	);
+
 	// ── Home page stylesheet ───────────────────────────────────────────────────
 	if ( is_front_page() ) {
 		wp_enqueue_style(
