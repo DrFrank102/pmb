@@ -198,12 +198,13 @@ body.home article.type-page {
 .pmb-pill {
 	display: inline-block;
 	padding: 4px 12px;
-	border: 1px solid rgba(255,255,255,0.3);
+	border: 1px solid transparent;
 	border-radius: 999px;
 	font-size: 0.75rem;
 	font-weight: 600;
 	letter-spacing: 0.06em;
-	color: rgba(255,255,255,0.8);
+	color: #000000;
+	background-color: var(--pmb-blue);
 }
 
 /* ═══════════════════════════════════════════════════════════════════ HERO */
