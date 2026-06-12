@@ -101,6 +101,14 @@
 	pointer-events: none;
 }
 
+/* Desktop: go transparent once the top bar has scrolled away */
+@media (min-width: 1025px) {
+	#masthead.pmb-nav-stuck {
+		background-color: transparent !important;
+		background-image: none !important;
+	}
+}
+
 /* Desktop: flash covers the nav-only bar from the logo's right edge */
 @media (min-width: 1025px) {
 	#masthead::after {

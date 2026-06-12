@@ -40,6 +40,29 @@
 		}
 	}
 
-	document.addEventListener( 'DOMContentLoaded', alignHeader );
-	window.addEventListener( 'resize', alignHeader );
+	function updateStickyState() {
+		var topbar   = document.getElementById( 'pmb-topbar' );
+		var masthead = document.getElementById( 'masthead' );
+		if ( ! topbar || ! masthead ) { return; }
+		if ( window.innerWidth < 1025 ) {
+			masthead.classList.remove( 'pmb-nav-stuck' );
+			return;
+		}
+		// Once the topbar has fully scrolled out of view, go transparent
+		if ( window.scrollY >= topbar.offsetHeight ) {
+			masthead.classList.add( 'pmb-nav-stuck' );
+		} else {
+			masthead.classList.remove( 'pmb-nav-stuck' );
+		}
+	}
+
+	document.addEventListener( 'DOMContentLoaded', function () {
+		alignHeader();
+		updateStickyState();
+	} );
+	window.addEventListener( 'resize', function () {
+		alignHeader();
+		updateStickyState();
+	} );
+	window.addEventListener( 'scroll', updateStickyState, { passive: true } );
 } )();
