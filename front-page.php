@@ -119,16 +119,6 @@
 	</div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════ PHOTO STRIP -->
-<section class="pmb-strip" aria-label="Project photos">
-	<div class="pmb-strip__rail">
-		<div class="pmb-strip__item pmb-strip__item--placeholder"><span>Add Photo</span></div>
-		<div class="pmb-strip__item pmb-strip__item--placeholder"><span>Add Photo</span></div>
-		<div class="pmb-strip__item pmb-strip__item--placeholder"><span>Add Photo</span></div>
-		<div class="pmb-strip__item pmb-strip__item--placeholder"><span>Add Photo</span></div>
-		<div class="pmb-strip__item pmb-strip__item--placeholder"><span>Add Photo</span></div>
-	</div>
-</section>
 
 <!-- ═══════════════════════════════════════════════════ ABOUT -->
 <section id="about" class="pmb-about pmb-section">
