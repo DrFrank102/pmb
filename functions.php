@@ -58,7 +58,7 @@ add_action( 'wp_enqueue_scripts', function () {
 		true
 	);
 
-	// ── Home page stylesheet ───────────────────────────────────────────────────
+	// ── Home page stylesheet + contact form JS ────────────────────────────────
 	if ( is_front_page() ) {
 		wp_enqueue_style(
 			'kadence-child-home',
@@ -66,6 +66,18 @@ add_action( 'wp_enqueue_scripts', function () {
 			[ 'kadence-child-style' ],
 			filemtime( get_stylesheet_directory() . '/css/home.css' )
 		);
+
+		wp_enqueue_script(
+			'kadence-child-contact-form',
+			get_stylesheet_directory_uri() . '/js/contact-form.js',
+			[],
+			filemtime( get_stylesheet_directory() . '/js/contact-form.js' ),
+			true
+		);
+		wp_localize_script( 'kadence-child-contact-form', 'pmbContact', [
+			'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+			'nonce'   => wp_create_nonce( 'pmb_contact_nonce' ),
+		] );
 	}
 
 } );
@@ -88,6 +100,7 @@ add_action( 'send_headers', function () {
 // =============================================================================
 
 // require get_stylesheet_directory() . '/inc/example.php';
+require get_stylesheet_directory() . '/inc/contact-form.php';
 
 // =============================================================================
 // Top Bar (desktop only — scrolls away, leaving sticky nav)

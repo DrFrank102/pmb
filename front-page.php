@@ -6,32 +6,116 @@
 <section id="home" class="pmb-hero">
 	<div class="pmb-hero__diagonal"></div>
 	<div class="pmb-container">
-		<div class="pmb-hero__inner">
-			<div class="pmb-hero__eyebrow">
-				<span class="pmb-pill">Est. 3rd Generation</span>
-				<span class="pmb-pill">Woburn, MA</span>
-				<span class="pmb-pill">Available 24/7</span>
-			</div>
-		</div>
-		<img
-			src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-herotext.png"
-			alt="P.M. Boisvert Plumbing &amp; Mechanical — 3rd Generation Master Plumber, Greater Boston Area"
-			class="pmb-hero__title-img"
-		>
-		<div class="pmb-hero__inner">
-			<div class="pmb-hero__certs">
-				<span>MassSave Certified</span>
-				<span>NSS Certified</span>
-				<span>Navien Technician</span>
-			</div>
-			<div class="pmb-hero__actions">
-				<a href="tel:7814848550" class="pmb-btn pmb-btn--orange">
-					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1.08h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-					Call Now: 781-484-8550
-				</a>
-				<a href="#contact" class="pmb-btn pmb-btn--ghost">Book a Service</a>
-			</div>
-		</div>
+		<div class="pmb-hero__layout">
+
+			<!-- ── Hero content (left) ─────────────────────── -->
+			<div class="pmb-hero__content">
+				<div class="pmb-hero__inner">
+					<div class="pmb-hero__eyebrow">
+						<span class="pmb-pill">Est. 3rd Generation</span>
+						<span class="pmb-pill">Woburn, MA</span>
+						<span class="pmb-pill">Available 24/7</span>
+					</div>
+				</div>
+				<img
+					src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-herotext.png"
+					alt="P.M. Boisvert Plumbing &amp; Mechanical — 3rd Generation Master Plumber, Greater Boston Area"
+					class="pmb-hero__title-img"
+				>
+				<div class="pmb-hero__inner">
+					<div class="pmb-hero__certs">
+						<span>MassSave Certified</span>
+						<span>NSS Certified</span>
+						<span>Navien Technician</span>
+					</div>
+					<div class="pmb-hero__actions">
+						<a href="tel:7814848550" class="pmb-btn pmb-btn--orange">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1.08h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+							Call Now: 781-484-8550
+						</a>
+						<a href="#contact" class="pmb-btn pmb-btn--ghost">Book a Service</a>
+					</div>
+				</div>
+			</div><!-- .pmb-hero__content -->
+
+			<!-- ── Contact form (right) ────────────────────── -->
+			<div class="pmb-hero__form-col">
+				<div class="pmb-form-card">
+					<h3 class="pmb-form-card__title">Contact us</h3>
+					<p class="pmb-form-card__sub">Leave your contact details and we will call you back.</p>
+
+					<form id="pmb-hero-form" novalidate>
+						<div class="pmb-form-card__msg" aria-live="polite"></div>
+
+						<div class="pmb-fc__field">
+							<input type="text" name="first_name" placeholder="First name" required>
+						</div>
+						<div class="pmb-fc__field">
+							<input type="text" name="last_name" placeholder="Last name" required>
+						</div>
+						<div class="pmb-fc__field">
+							<input type="tel" name="phone" placeholder="Phone number" required>
+						</div>
+						<div class="pmb-fc__field">
+							<input type="email" name="email" placeholder="Email">
+						</div>
+
+						<p class="pmb-fc__section-label">What is your address?</p>
+
+						<div class="pmb-fc__row">
+							<div class="pmb-fc__field">
+								<input type="text" name="street" placeholder="Street address *" required>
+							</div>
+							<div class="pmb-fc__field">
+								<input type="text" name="unit" placeholder="Unit / apartment / suite">
+							</div>
+						</div>
+						<div class="pmb-fc__row">
+							<div class="pmb-fc__field">
+								<input type="text" name="city" placeholder="City *" required>
+							</div>
+							<div class="pmb-fc__field">
+								<input type="text" name="zip" placeholder="Zip code *" required>
+							</div>
+						</div>
+						<div class="pmb-fc__row">
+							<div class="pmb-fc__field">
+								<select name="country">
+									<option value="United States" selected>United States</option>
+									<option value="Canada">Canada</option>
+								</select>
+							</div>
+							<div class="pmb-fc__field">
+								<select name="state">
+									<option value="" disabled selected>State *</option>
+									<?php
+									$states = ['AL'=>'Alabama','AK'=>'Alaska','AZ'=>'Arizona','AR'=>'Arkansas','CA'=>'California','CO'=>'Colorado','CT'=>'Connecticut','DE'=>'Delaware','FL'=>'Florida','GA'=>'Georgia','HI'=>'Hawaii','ID'=>'Idaho','IL'=>'Illinois','IN'=>'Indiana','IA'=>'Iowa','KS'=>'Kansas','KY'=>'Kentucky','LA'=>'Louisiana','ME'=>'Maine','MD'=>'Maryland','MA'=>'Massachusetts','MI'=>'Michigan','MN'=>'Minnesota','MS'=>'Mississippi','MO'=>'Missouri','MT'=>'Montana','NE'=>'Nebraska','NV'=>'Nevada','NH'=>'New Hampshire','NJ'=>'New Jersey','NM'=>'New Mexico','NY'=>'New York','NC'=>'North Carolina','ND'=>'North Dakota','OH'=>'Ohio','OK'=>'Oklahoma','OR'=>'Oregon','PA'=>'Pennsylvania','RI'=>'Rhode Island','SC'=>'South Carolina','SD'=>'South Dakota','TN'=>'Tennessee','TX'=>'Texas','UT'=>'Utah','VT'=>'Vermont','VA'=>'Virginia','WA'=>'Washington','WV'=>'West Virginia','WI'=>'Wisconsin','WY'=>'Wyoming'];
+									foreach ( $states as $abbr => $name ) {
+										printf( '<option value="%s">%s</option>', esc_attr( $abbr ), esc_html( $name ) );
+									}
+									?>
+								</select>
+							</div>
+						</div>
+
+						<div class="pmb-fc__field">
+							<input type="text" name="service" placeholder="Service details">
+						</div>
+						<div class="pmb-fc__field">
+							<input type="text" name="referral" placeholder="How did you hear about us?">
+						</div>
+
+						<label class="pmb-fc__consent">
+							<input type="checkbox" name="consent">
+							<span>By checking this box, I consent to receive marketing and promotional text messages from PM Boisvert Plumbing and Mechanical at the phone number I have provided above. Message and data rates may apply. Message frequency varies. Reply HELP for help and STOP to stop. I consent to the <a href="/terms-of-service">Terms of Service</a> and <a href="/privacy-policy">Privacy Policy</a>.</span>
+						</label>
+
+						<button type="submit" class="pmb-form-card__submit">Contact us</button>
+					</form>
+				</div><!-- .pmb-form-card -->
+			</div><!-- .pmb-hero__form-col -->
+
+		</div><!-- .pmb-hero__layout -->
 	</div>
 </section>
 
