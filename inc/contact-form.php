@@ -3,7 +3,9 @@ add_action( 'wp_ajax_pmb_contact',        'pmb_handle_contact' );
 add_action( 'wp_ajax_nopriv_pmb_contact', 'pmb_handle_contact' );
 
 function pmb_handle_contact() {
-	check_ajax_referer( 'pmb_contact_nonce', 'nonce' );
+	if ( ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['nonce'] ?? '' ) ), 'pmb_contact_nonce' ) ) {
+		wp_send_json_error( 'Your session has expired. Please refresh the page and try again.' );
+	}
 
 	$first   = sanitize_text_field( wp_unslash( $_POST['first_name'] ?? '' ) );
 	$last    = sanitize_text_field( wp_unslash( $_POST['last_name']  ?? '' ) );
@@ -33,8 +35,8 @@ function pmb_handle_contact() {
 	$body .= $street . ( $unit ? ", {$unit}" : '' ) . "\n";
 	$body .= "{$city}, {$state} {$zip}\n";
 	$body .= "{$country}\n\n";
-	$body .= "Service Details:\n{$service}\n\n";
-	$body .= "How they heard about us: {$referral}\n";
+	$body .= "Service Details: " . ( $service  ?: '(not provided)' ) . "\n";
+	$body .= "How they heard: "  . ( $referral ?: '(not provided)' ) . "\n";
 
 	$headers = [ 'Content-Type: text/plain; charset=UTF-8' ];
 	if ( $email ) {
