@@ -220,16 +220,6 @@ body.home article.type-page {
 	overflow: hidden;
 }
 
-.pmb-hero::after {
-	content: '';
-	position: absolute;
-	bottom: -2px;
-	left: 0;
-	right: 0;
-	height: 60px;
-	background: var(--pmb-white);
-	clip-path: polygon(0 100%, 100% 100%, 100% 0);
-}
 
 .pmb-hero__diagonal {
 	display: none;
