@@ -30,6 +30,11 @@
 	#masthead .header-navigation { margin-right: 30px; }
 }
 
+#masthead .header-navigation {
+	position: relative;
+	z-index: 200;
+}
+
 /* ── Nav submenu hover fix ───────────────────────────────────────────────────── */
 /* Kadence's JS closes submenus on mouseout before the cursor reaches them.
    Force the submenu visible via CSS :hover on the parent <li> so it stays
