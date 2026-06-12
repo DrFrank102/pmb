@@ -14,10 +14,19 @@
 		if ( nav ) { nav.style.transform = ''; }
 
 		if ( isDesktop ) {
+			var topbarLogo = document.querySelector( '#pmb-topbar .pmb-topbar__logo' );
+
+			// Pin masthead height to the logo height so black area matches the top bar logo
+			if ( topbarLogo ) {
+				var logoHeight = topbarLogo.getBoundingClientRect().height;
+				masthead.style.height = logoHeight + 'px';
+				mastheadHeight = logoHeight;
+			}
+
 			// Flash height = nav menu height + tight padding (8px total, 4px each side)
 			var navH = nav ? nav.getBoundingClientRect().height : 40;
 			flashHeight = navH + 8;
-			var topbarLogo = document.querySelector( '#pmb-topbar .pmb-topbar__logo' );
+
 			if ( topbarLogo ) {
 				flashWidth = mastheadRect.right - topbarLogo.getBoundingClientRect().right;
 			} else {
