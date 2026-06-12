@@ -1,18 +1,30 @@
 ( function () {
-	function alignFlash() {
-		var branding  = document.querySelector( '#masthead .site-branding' );
-		var masthead  = document.getElementById( 'masthead' );
+	function alignHeader() {
+		var branding = document.querySelector( '#masthead .site-branding' );
+		var nav      = document.querySelector( '#masthead .header-navigation' );
+		var masthead = document.getElementById( 'masthead' );
 		if ( ! branding || ! masthead ) { return; }
 
-		var brandingRight  = branding.getBoundingClientRect().right;
-		var mastheadRight  = masthead.getBoundingClientRect().right;
-		var mastheadHeight = masthead.getBoundingClientRect().height;
-		var flashWidth     = mastheadRight - brandingRight;
+		var mastheadRect   = masthead.getBoundingClientRect();
+		var mastheadHeight = mastheadRect.height;
+		var flashHeight    = mastheadHeight * 0.33;
+		var flashWidth     = mastheadRect.right - branding.getBoundingClientRect().right;
 
+		// Size the flash pseudo-element
 		masthead.style.setProperty( '--pmb-flash-width',  flashWidth + 'px' );
-		masthead.style.setProperty( '--pmb-flash-height', ( mastheadHeight * 0.33 ) + 'px' );
+		masthead.style.setProperty( '--pmb-flash-height', flashHeight + 'px' );
+
+		// Center the nav vertically within the flash zone (bottom 33%)
+		if ( nav ) {
+			nav.style.transform = '';  // reset before measuring
+			var navRect       = nav.getBoundingClientRect();
+			var navCenter     = ( navRect.top - mastheadRect.top ) + navRect.height / 2;
+			var flashCenter   = mastheadHeight - flashHeight / 2;
+			var offset        = flashCenter - navCenter;
+			nav.style.transform = 'translateY(' + offset + 'px)';
+		}
 	}
 
-	document.addEventListener( 'DOMContentLoaded', alignFlash );
-	window.addEventListener( 'resize', alignFlash );
+	document.addEventListener( 'DOMContentLoaded', alignHeader );
+	window.addEventListener( 'resize', alignHeader );
 } )();
