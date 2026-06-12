@@ -35,6 +35,10 @@
 	z-index: 200;
 }
 
+#masthead .header-navigation li.menu-item > a {
+	color: #000000;
+}
+
 /* ── Nav submenu hover fix ───────────────────────────────────────────────────── */
 /* Kadence's JS closes submenus on mouseout before the cursor reaches them.
    Force the submenu visible via CSS :hover on the parent <li> so it stays
