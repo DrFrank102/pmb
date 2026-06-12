@@ -64,6 +64,16 @@
 	z-index: 1000;
 }
 
+.admin-bar #masthead {
+	top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+	.admin-bar #masthead {
+		top: 46px;
+	}
+}
+
 #masthead::after {
 	content: '';
 	position: absolute;
