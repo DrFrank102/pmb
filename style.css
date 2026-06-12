@@ -49,6 +49,23 @@
 
 #masthead {
 	background-color: #000000 !important;
+	position: relative;
+	overflow: visible;
+}
+
+#masthead::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 300px;
+	height: 100%;
+	background-image: url('https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/Blue-Flash.png');
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-size: auto 100%;
+	z-index: 100;
+	pointer-events: none;
 }
 
 #masthead .site-branding {
