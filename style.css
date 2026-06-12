@@ -58,12 +58,12 @@
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	width: 300px;
-	height: 100%;
+	width: 75%;
+	height: 33.333%;
 	background-image: url('https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/Blue-Flash.png');
 	background-repeat: no-repeat;
 	background-position: bottom right;
-	background-size: auto 100%;
+	background-size: 100% 100%;
 	z-index: 100;
 	pointer-events: none;
 }
