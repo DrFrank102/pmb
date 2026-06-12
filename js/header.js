@@ -9,8 +9,8 @@
 		var mastheadHeight = masthead.getBoundingClientRect().height;
 		var flashWidth     = mastheadRight - brandingRight;
 
-		masthead.style.setProperty( '--pmb-flash-width',  flashWidth  + 'px' );
-		masthead.style.setProperty( '--pmb-flash-height', mastheadHeight + 'px' );
+		masthead.style.setProperty( '--pmb-flash-width',  flashWidth + 'px' );
+		masthead.style.setProperty( '--pmb-flash-height', ( mastheadHeight * 0.33 ) + 'px' );
 	}
 
 	document.addEventListener( 'DOMContentLoaded', alignFlash );
