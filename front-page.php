@@ -183,23 +183,48 @@
 
 <!-- ═══════════════════════════════════════════════════ BRANDS -->
 <section class="pmb-brands pmb-section--light">
-	<div class="pmb-brands__wrap">
-		<img
-			src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/Specialize_Full.png"
-			alt="Brands we specialize in"
-			class="pmb-brands__img"
-		>
-		<div class="pmb-brands__overlay">
+
+	<!-- Desktop: background image with overlaid text + logos -->
+	<div class="pmb-brands__desktop">
+		<div class="pmb-brands__wrap">
+			<img
+				src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/Specialize_Full.png"
+				alt="Brands we specialize in"
+				class="pmb-brands__img"
+			>
+			<div class="pmb-brands__overlay">
+				<span class="pmb-brands__line1">Brands We</span>
+				<span class="pmb-brands__line2">Specialize In</span>
+			</div>
+			<div class="pmb-brands__logos">
+				<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-Rinnai.png" alt="Rinnai" class="pmb-brands__logo">
+				<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-Lochinvar.png" alt="Lochinvar" class="pmb-brands__logo">
+				<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-navien.png" alt="Navien" class="pmb-brands__logo">
+				<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-ideal.png" alt="Ideal" class="pmb-brands__logo">
+			</div>
+		</div>
+	</div>
+
+	<!-- Mobile/tablet: blue header + grey logo rows -->
+	<div class="pmb-brands__mobile">
+		<div class="pmb-brands__mobile-header">
 			<span class="pmb-brands__line1">Brands We</span>
 			<span class="pmb-brands__line2">Specialize In</span>
 		</div>
-		<div class="pmb-brands__logos">
-			<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-Rinnai.png" alt="Rinnai" class="pmb-brands__logo">
-			<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-Lochinvar.png" alt="Lochinvar" class="pmb-brands__logo">
-			<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-navien.png" alt="Navien" class="pmb-brands__logo">
-			<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-ideal.png" alt="Ideal" class="pmb-brands__logo">
+		<div class="pmb-brands__mobile-row">
+			<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-Rinnai.png" alt="Rinnai">
+		</div>
+		<div class="pmb-brands__mobile-row">
+			<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-Lochinvar.png" alt="Lochinvar">
+		</div>
+		<div class="pmb-brands__mobile-row">
+			<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-navien.png" alt="Navien">
+		</div>
+		<div class="pmb-brands__mobile-row">
+			<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-ideal.png" alt="Ideal">
 		</div>
 	</div>
+
 </section>
 
 <!-- ═══════════════════════════════════════════════════ SERVICES -->
