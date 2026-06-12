@@ -236,7 +236,7 @@
 
 			<div class="pmb-svc-card">
 				<div class="pmb-svc-card__icon">
-					<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="22"/><line x1="2" y1="12" x2="8" y2="12"/><line x1="16" y1="12" x2="22" y2="12"/></svg>
+					<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-DrainCleaning.png" alt="Drain Cleaning">
 				</div>
 				<h3>Drain Cleaning &amp; Camera</h3>
 				<p>Professional diagnosis and clearing of clogs, blockages, and sewage backups using camera inspection equipment.</p>
@@ -244,7 +244,7 @@
 
 			<div class="pmb-svc-card">
 				<div class="pmb-svc-card__icon">
-					<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+					<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-fixture-repairs-replacements.png" alt="Fixture Repairs">
 				</div>
 				<h3>Fixture Repairs &amp; Replacements</h3>
 				<p>Faucets, valves, waterstops, tub spouts, toilets, and baseboard systems repaired or replaced right the first time.</p>
@@ -252,7 +252,7 @@
 
 			<div class="pmb-svc-card">
 				<div class="pmb-svc-card__icon">
-					<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+					<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-hvac.png" alt="HVAC">
 				</div>
 				<h3>HVAC Services</h3>
 				<p>Repairs, maintenance, refrigerant recharging, and minisplit installations to keep your system at peak efficiency.</p>
@@ -260,7 +260,7 @@
 
 			<div class="pmb-svc-card">
 				<div class="pmb-svc-card__icon">
-					<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2c0 6-8 8-8 14a8 8 0 0016 0c0-6-8-8-8-14z"/><path d="M12 12c0 2.5-3 3.5-3 5.5a3 3 0 006 0c0-2-3-3-3-5.5z"/></svg>
+					<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-boiler-services.png" alt="Boiler Services">
 				</div>
 				<h3>Boiler Services</h3>
 				<p>Installation, maintenance, cleaning, and repair covering the complete lifespan of residential and commercial boilers.</p>
@@ -268,7 +268,7 @@
 
 			<div class="pmb-svc-card">
 				<div class="pmb-svc-card__icon">
-					<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2c0 5-5 7-5 12a5 5 0 0010 0c0-5-5-7-5-12z"/><path d="M9 17c0-1.5 3-2.5 3-4s-3-2.5-3-4"/></svg>
+					<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-gas-propane.png" alt="Natural Gas &amp; Propane">
 				</div>
 				<h3>Natural Gas &amp; Propane</h3>
 				<p>Safe propane connections for outdoor grills and whole-home natural gas solutions installed to code.</p>
@@ -276,7 +276,7 @@
 
 			<div class="pmb-svc-card">
 				<div class="pmb-svc-card__icon">
-					<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+					<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-waterheater-services.png" alt="Water Heater Services">
 				</div>
 				<h3>Water Heater Services</h3>
 				<p>Traditional and tankless water heater repairs, maintenance, replacements, and upgrades for every home.</p>

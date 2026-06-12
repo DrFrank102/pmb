@@ -98,7 +98,7 @@ body.home article.type-page {
 
 .pmb-eyebrow {
 	font-family: var(--pmb-body);
-	font-size: 0.75rem;
+	font-size: 1.25rem;
 	font-weight: 700;
 	letter-spacing: 0.12em;
 	text-transform: uppercase;
@@ -700,39 +700,52 @@ body.home article.type-page {
 .pmb-services__grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 24px;
-	margin-top: 48px;
+	column-gap: 24px;
+	row-gap: 72px;
+	margin-top: 0;
+	padding-top: 52px;
 }
 
 .pmb-svc-card {
-	background: var(--pmb-white);
-	border: 1px solid var(--pmb-mid);
+	position: relative;
+	background: #efefef;
+	border: none;
 	border-radius: var(--pmb-radius);
-	padding: 32px 28px;
-	transition: box-shadow 0.25s var(--pmb-ease), transform 0.25s var(--pmb-ease), border-color 0.25s;
+	padding: 60px 28px 32px;
+	text-align: center;
+	transition: box-shadow 0.25s var(--pmb-ease), transform 0.25s var(--pmb-ease);
 }
 
 .pmb-svc-card:hover {
 	box-shadow: var(--pmb-shadow-lg);
 	transform: translateY(-4px);
-	border-color: transparent;
 }
 
 .pmb-svc-card__icon {
-	width: 56px;
-	height: 56px;
+	position: absolute;
+	top: -44px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 88px;
+	height: 88px;
 	border-radius: 50%;
-	background: var(--pmb-navy);
-	color: var(--pmb-white);
+	background: #2c3340;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 20px;
+	overflow: hidden;
+	box-shadow: 0 4px 14px rgba(0,0,0,0.25);
 	transition: background 0.2s;
 }
 
 .pmb-svc-card:hover .pmb-svc-card__icon {
 	background: var(--pmb-orange);
+}
+
+.pmb-svc-card__icon img {
+	width: 56px;
+	height: 56px;
+	object-fit: contain;
 }
 
 .pmb-svc-card h3 {
