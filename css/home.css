@@ -248,6 +248,13 @@ body.home article.type-page {
 	margin: 0 0 16px;
 }
 
+.pmb-hero__title-img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 0 16px;
+}
+
 .pmb-hero__title-name {
 	font-size: clamp(3rem, 7vw, 5.5rem);
 	color: var(--pmb-white);
