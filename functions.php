@@ -68,6 +68,14 @@ add_action( 'wp_enqueue_scripts', function () {
 		);
 
 		wp_enqueue_script(
+			'kadence-child-about-carousel',
+			get_stylesheet_directory_uri() . '/js/about-carousel.js',
+			[],
+			filemtime( get_stylesheet_directory() . '/js/about-carousel.js' ),
+			true
+		);
+
+		wp_enqueue_script(
 			'kadence-child-contact-form',
 			get_stylesheet_directory_uri() . '/js/contact-form.js',
 			[],

@@ -160,6 +160,24 @@
 			</div>
 			<a href="tel:7814848550" class="pmb-btn pmb-btn--navy pmb-btn--mt">Call Us Today</a>
 		</div>
+
+		<!-- ── Photo carousel ──────────────────────────────── -->
+		<div class="pmb-about__gallery">
+			<div class="pmb-carousel" id="pmb-about-carousel">
+				<?php for ( $i = 1; $i <= 22; $i++ ) :
+					$num = sprintf( '%03d', $i );
+					$url = 'https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-' . $num . '.jpg';
+				?>
+				<img
+					src="<?php echo esc_url( $url ); ?>"
+					alt="PM Boisvert Plumbing project photo <?php echo $i; ?>"
+					class="pmb-carousel__slide<?php echo $i === 1 ? ' pmb-carousel__slide--active' : ''; ?>"
+					<?php if ( $i > 1 ) { echo 'loading="lazy"'; } ?>
+				>
+				<?php endfor; ?>
+			</div>
+		</div>
+
 	</div>
 </section>
 

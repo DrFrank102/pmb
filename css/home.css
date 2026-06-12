@@ -526,7 +526,10 @@ body.home article.type-page {
 /* ═══════════════════════════════════════════════════════════════════ ABOUT */
 
 .pmb-about__layout {
-	max-width: 780px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 60px;
+	align-items: start;
 }
 
 .pmb-about__copy p {
@@ -1012,10 +1015,6 @@ body.home article.type-page {
 		padding: 60px 0;
 	}
 
-	.pmb-about__creds {
-		grid-template-columns: 1fr 1fr;
-	}
-
 	.pmb-services__grid,
 	.pmb-reviews__grid {
 		grid-template-columns: 1fr;
@@ -1037,4 +1036,34 @@ body.home article.type-page {
 	.pmb-form__row {
 		grid-template-columns: 1fr;
 	}
+}
+
+/* ═══════════════════════════════════════════════════════ ABOUT CAROUSEL */
+
+.pmb-about__gallery {
+	position: sticky;
+	top: 100px;
+}
+
+.pmb-carousel {
+	position: relative;
+	border-radius: 10px;
+	overflow: hidden;
+	aspect-ratio: 4 / 3;
+	background: var(--pmb-mid);
+	box-shadow: var(--pmb-shadow-lg);
+}
+
+.pmb-carousel__slide {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+.pmb-carousel__slide--active {
+	opacity: 1;
 }
