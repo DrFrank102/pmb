@@ -600,10 +600,46 @@ body.home article.type-page {
 
 /* ═══════════════════════════════════════════════════════════════════ BRANDS */
 
+.pmb-brands__wrap {
+	position: relative;
+	display: block;
+}
+
 .pmb-brands__img {
 	display: block;
 	width: 100%;
 	height: auto;
+}
+
+.pmb-brands__overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	pointer-events: none;
+	line-height: 1.3;
+}
+
+.pmb-brands__line1 {
+	display: block;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #ffffff;
+	letter-spacing: 0.08em;
+}
+
+.pmb-brands__line2 {
+	display: block;
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #000000;
+	letter-spacing: 0.04em;
 }
 
 /* ═══════════════════════════════════════════════════════════════ SERVICES */

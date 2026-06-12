@@ -183,11 +183,17 @@
 
 <!-- ═══════════════════════════════════════════════════ BRANDS -->
 <section class="pmb-brands pmb-section--light">
-	<img
-		src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/Specialize_Full.png"
-		alt="Brands we specialize in"
-		class="pmb-brands__img"
-	>
+	<div class="pmb-brands__wrap">
+		<img
+			src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/Specialize_Full.png"
+			alt="Brands we specialize in"
+			class="pmb-brands__img"
+		>
+		<div class="pmb-brands__overlay">
+			<span class="pmb-brands__line1">Brands We</span>
+			<span class="pmb-brands__line2">Specialize In</span>
+		</div>
+	</div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════ SERVICES -->
