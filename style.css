@@ -94,10 +94,6 @@
 	}
 }
 
-@media (max-width: 1024px) {
-	#masthead { position: relative !important; top: auto !important; }
-}
-
 #masthead {
 	background-color: #111111 !important;
 	background-image: repeating-linear-gradient(
