@@ -68,6 +68,14 @@ add_action( 'wp_enqueue_scripts', function () {
 		);
 
 		wp_enqueue_script(
+			'kadence-child-brands',
+			get_stylesheet_directory_uri() . '/js/brands.js',
+			[],
+			filemtime( get_stylesheet_directory() . '/js/brands.js' ),
+			true
+		);
+
+		wp_enqueue_script(
 			'kadence-child-about-carousel',
 			get_stylesheet_directory_uri() . '/js/about-carousel.js',
 			[],
@@ -85,10 +93,29 @@ add_action( 'wp_enqueue_scripts', function () {
 		wp_localize_script( 'kadence-child-contact-form', 'pmbContact', [
 			'ajaxUrl' => admin_url( 'admin-ajax.php' ),
 			'nonce'   => wp_create_nonce( 'pmb_contact_nonce' ),
+			'phone'   => pmb_active_phone(),
 		] );
 	}
 
 } );
+
+// =============================================================================
+// Google Analytics 4
+// =============================================================================
+
+add_action( 'wp_head', function () {
+	if ( is_user_logged_in() ) return;
+	?>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-197MNMN27H"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-197MNMN27H');
+	</script>
+	<?php
+}, 1 );
 
 // =============================================================================
 // Cache-Control for logged-out visitors
@@ -108,14 +135,23 @@ add_action( 'send_headers', function () {
 // =============================================================================
 
 // require get_stylesheet_directory() . '/inc/example.php';
+require get_stylesheet_directory() . '/inc/settings.php';
 require get_stylesheet_directory() . '/inc/contact-form.php';
+
+// Replace the Facebook menu item title (ID 89) with an inline SVG icon.
+add_filter( 'nav_menu_item_title', function ( $title, $item ) {
+	if ( (int) $item->ID === 89 ) {
+		return '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-label="Facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>';
+	}
+	return $title;
+}, 10, 2 );
 
 // =============================================================================
 // Top Bar (desktop only — scrolls away, leaving sticky nav)
 // =============================================================================
 
 add_action( 'kadence_before_header', function () {
-	$book_url = esc_url( home_url( '/#contact' ) );
+	$book_url = 'https://book.housecallpro.com/book/PM-Boisvert-Plumbing-and-Mechanical/cfc09789d98343f6864a52ca1ecef7af?v2=true';
 	?>
 	<div id="pmb-topbar">
 		<div class="pmb-topbar__inner">
@@ -146,7 +182,7 @@ add_action( 'kadence_before_header', function () {
 					</svg>
 					<div class="pmb-topbar__block-text">
 						<span class="pmb-topbar__label">Call Us</span>
-						<strong class="pmb-topbar__value">781-484-8550</strong>
+						<strong class="pmb-topbar__value"><?php echo esc_html( pmb_active_phone() ); ?></strong>
 					</div>
 				</div>
 
@@ -160,7 +196,7 @@ add_action( 'kadence_before_header', function () {
 					</div>
 				</div>
 
-				<a href="<?php echo $book_url; ?>" class="pmb-topbar__book">Book Now</a>
+				<a href="<?php echo $book_url; ?>" class="pmb-topbar__book" target="_blank" rel="noopener noreferrer">Book Now</a>
 
 			</div><!-- .pmb-topbar__blocks -->
 		</div><!-- .pmb-topbar__inner -->

@@ -40,6 +40,41 @@
 	color: #000000;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
+	font-size: 0.85rem;
+	transition: color 0.2s, background 0.2s;
+}
+
+#masthead .header-navigation li.menu-item > a:hover {
+	color: #ffffff !important;
+	background: rgba(255,255,255,0.2);
+}
+
+#masthead .header-navigation ul > li.menu-item + li.menu-item {
+	position: relative;
+}
+
+#masthead .header-navigation ul > li.menu-item + li.menu-item::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 1px;
+	height: 1em;
+	background: rgba(255,255,255,0.35);
+}
+
+#masthead .header-navigation li.menu-item-83 > a {
+	color: #cc0000 !important;
+}
+
+#masthead .header-navigation li.nmr-administrator > a {
+	color: #ffd700 !important;
+}
+
+#masthead .header-navigation li.menu-item-89 > a {
+	display: inline-flex;
+	align-items: center;
 }
 
 /* ── Nav submenu hover fix ───────────────────────────────────────────────────── */

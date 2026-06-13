@@ -2,6 +2,48 @@
 add_action( 'wp_ajax_pmb_contact',        'pmb_handle_contact' );
 add_action( 'wp_ajax_nopriv_pmb_contact', 'pmb_handle_contact' );
 
+add_action( 'wp_ajax_pmb_simple_contact',        'pmb_handle_simple_contact' );
+add_action( 'wp_ajax_nopriv_pmb_simple_contact', 'pmb_handle_simple_contact' );
+
+function pmb_handle_simple_contact() {
+	if ( ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['nonce'] ?? '' ) ), 'pmb_contact_nonce' ) ) {
+		wp_send_json_error( 'Your session has expired. Please refresh the page and try again.' );
+	}
+
+	$name    = sanitize_text_field( wp_unslash( $_POST['pmb_name']    ?? '' ) );
+	$phone   = sanitize_text_field( wp_unslash( $_POST['pmb_phone']   ?? '' ) );
+	$email   = sanitize_email(      wp_unslash( $_POST['pmb_email']   ?? '' ) );
+	$service = sanitize_text_field( wp_unslash( $_POST['pmb_service'] ?? '' ) );
+	$message = sanitize_textarea_field( wp_unslash( $_POST['pmb_message'] ?? '' ) );
+
+	if ( empty( $name ) || empty( $phone ) ) {
+		wp_send_json_error( 'Please fill in your name and phone number.' );
+	}
+
+	$to      = 'howard188usa@gmail.com';
+	$subject = ( pmb_is_test_mode() ? '[TEST] ' : '' ) . "New Contact: {$name} — PM Boisvert Plumbing";
+
+	$body  = "New message from " . pmb_active_url() . "\n\n";
+	$body .= "Name:    {$name}\n";
+	$body .= "Phone:   {$phone}\n";
+	$body .= "Email:   " . ( $email   ?: '(not provided)' ) . "\n";
+	$body .= "Service: " . ( $service ?: '(not provided)' ) . "\n\n";
+	$body .= "Message:\n" . ( $message ?: '(none)' ) . "\n";
+
+	$headers = [ 'Content-Type: text/plain; charset=UTF-8' ];
+	if ( $email ) {
+		$headers[] = "Reply-To: {$name} <{$email}>";
+	}
+
+	$sent = wp_mail( $to, $subject, $body, $headers );
+
+	if ( $sent ) {
+		wp_send_json_success( "Thank you! We'll be in touch shortly." );
+	} else {
+		wp_send_json_error( 'There was a problem sending your request. Please call us at ' . pmb_active_phone() . '.' );
+	}
+}
+
 function pmb_handle_contact() {
 	if ( ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['nonce'] ?? '' ) ), 'pmb_contact_nonce' ) ) {
 		wp_send_json_error( 'Your session has expired. Please refresh the page and try again.' );
@@ -25,9 +67,9 @@ function pmb_handle_contact() {
 	}
 
 	$to      = 'howard188usa@gmail.com';
-	$subject = "New Lead: {$first} {$last} — PM Boisvert Plumbing";
+	$subject = ( pmb_is_test_mode() ? '[TEST] ' : '' ) . "New Lead: {$first} {$last} — PM Boisvert Plumbing";
 
-	$body  = "New contact form submission from pmb.kelwynmanor.org\n\n";
+	$body  = "New contact form submission from " . pmb_active_url() . "\n\n";
 	$body .= "Name:  {$first} {$last}\n";
 	$body .= "Phone: {$phone}\n";
 	$body .= "Email: {$email}\n\n";
@@ -48,6 +90,6 @@ function pmb_handle_contact() {
 	if ( $sent ) {
 		wp_send_json_success( "Thank you! We'll be in touch shortly." );
 	} else {
-		wp_send_json_error( 'There was a problem sending your request. Please call us at 781-484-8550.' );
+		wp_send_json_error( 'There was a problem sending your request. Please call us at ' . pmb_active_phone() . '.' );
 	}
 }

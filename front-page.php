@@ -29,90 +29,21 @@
 						<span>Navien Technician</span>
 					</div>
 					<div class="pmb-hero__actions">
-						<a href="tel:7814848550" class="pmb-btn pmb-btn--orange">
+						<a href="tel:<?php echo esc_attr( pmb_active_phone_digits() ); ?>" class="pmb-btn pmb-btn--orange">
 							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1.08h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-							Call Now: 781-484-8550
+							Call Now: <?php echo esc_html( pmb_active_phone() ); ?>
 						</a>
-						<a href="#contact" class="pmb-btn pmb-btn--ghost">Book a Service</a>
+						<a href="#contact" class="pmb-btn pmb-btn--navy">Book a Service</a>
 					</div>
 				</div>
 			</div><!-- .pmb-hero__content -->
 
-			<!-- ── Contact form (right) ────────────────────── -->
+			<!-- ── Housecall Pro lead form (right) ───────────── -->
 			<div class="pmb-hero__form-col">
-				<div class="pmb-form-card">
-					<h3 class="pmb-form-card__title">Contact us</h3>
-					<p class="pmb-form-card__sub">Leave your contact details and we will call you back.</p>
-
-					<form id="pmb-hero-form" novalidate>
-						<div class="pmb-form-card__msg" aria-live="polite"></div>
-
-						<div class="pmb-fc__field">
-							<input type="text" name="first_name" placeholder="First name" required>
-						</div>
-						<div class="pmb-fc__field">
-							<input type="text" name="last_name" placeholder="Last name" required>
-						</div>
-						<div class="pmb-fc__field">
-							<input type="tel" name="phone" placeholder="Phone number" required>
-						</div>
-						<div class="pmb-fc__field">
-							<input type="email" name="email" placeholder="Email">
-						</div>
-
-						<p class="pmb-fc__section-label">What is your address?</p>
-
-						<div class="pmb-fc__row">
-							<div class="pmb-fc__field">
-								<input type="text" name="street" placeholder="Street address *" required>
-							</div>
-							<div class="pmb-fc__field">
-								<input type="text" name="unit" placeholder="Unit / apartment / suite">
-							</div>
-						</div>
-						<div class="pmb-fc__row">
-							<div class="pmb-fc__field">
-								<input type="text" name="city" placeholder="City *" required>
-							</div>
-							<div class="pmb-fc__field">
-								<input type="text" name="zip" placeholder="Zip code *" required>
-							</div>
-						</div>
-						<div class="pmb-fc__row">
-							<div class="pmb-fc__field">
-								<select name="country">
-									<option value="United States" selected>United States</option>
-									<option value="Canada">Canada</option>
-								</select>
-							</div>
-							<div class="pmb-fc__field">
-								<select name="state">
-									<option value="" disabled selected>State *</option>
-									<?php
-									$states = ['AL'=>'Alabama','AK'=>'Alaska','AZ'=>'Arizona','AR'=>'Arkansas','CA'=>'California','CO'=>'Colorado','CT'=>'Connecticut','DE'=>'Delaware','FL'=>'Florida','GA'=>'Georgia','HI'=>'Hawaii','ID'=>'Idaho','IL'=>'Illinois','IN'=>'Indiana','IA'=>'Iowa','KS'=>'Kansas','KY'=>'Kentucky','LA'=>'Louisiana','ME'=>'Maine','MD'=>'Maryland','MA'=>'Massachusetts','MI'=>'Michigan','MN'=>'Minnesota','MS'=>'Mississippi','MO'=>'Missouri','MT'=>'Montana','NE'=>'Nebraska','NV'=>'Nevada','NH'=>'New Hampshire','NJ'=>'New Jersey','NM'=>'New Mexico','NY'=>'New York','NC'=>'North Carolina','ND'=>'North Dakota','OH'=>'Ohio','OK'=>'Oklahoma','OR'=>'Oregon','PA'=>'Pennsylvania','RI'=>'Rhode Island','SC'=>'South Carolina','SD'=>'South Dakota','TN'=>'Tennessee','TX'=>'Texas','UT'=>'Utah','VT'=>'Vermont','VA'=>'Virginia','WA'=>'Washington','WV'=>'West Virginia','WI'=>'Wisconsin','WY'=>'Wyoming'];
-									foreach ( $states as $abbr => $name ) {
-										printf( '<option value="%s">%s</option>', esc_attr( $abbr ), esc_html( $name ) );
-									}
-									?>
-								</select>
-							</div>
-						</div>
-
-						<div class="pmb-fc__field">
-							<input type="text" name="service" placeholder="Service details">
-						</div>
-						<div class="pmb-fc__field">
-							<input type="text" name="referral" placeholder="How did you hear about us?">
-						</div>
-
-						<label class="pmb-fc__consent">
-							<input type="checkbox" name="consent">
-							<span>By checking this box, I consent to receive marketing and promotional text messages from PM Boisvert Plumbing and Mechanical at the phone number I have provided above. Message and data rates may apply. Message frequency varies. Reply HELP for help and STOP to stop. I consent to the <a href="/terms-of-service">Terms of Service</a> and <a href="/privacy-policy">Privacy Policy</a>.</span>
-						</label>
-
-						<button type="submit" class="pmb-form-card__submit">Contact us</button>
-					</form>
-				</div><!-- .pmb-form-card -->
+				<!--Start of Housecallpro Lead Capture code-->
+				<script async src="https://online-booking.housecallpro.com/script.js?token=1bb7635e81074ddebc797474dca7865f&orgName=PM-Boisvert-Plumbing-and-Mechanical"></script>
+				<iframe style="border: none; width: 100%;" id="hcp-lead-iframe" src="https://book.housecallpro.com/lead-form/PM-Boisvert-Plumbing-and-Mechanical/1bb7635e81074ddebc797474dca7865f"></iframe>
+				<!--End of Housecallpro Lead Capture code-->
 			</div><!-- .pmb-hero__form-col -->
 
 		</div><!-- .pmb-hero__layout -->
@@ -158,7 +89,7 @@
 					<div class="pmb-cred-card__sub">Factory Trained</div>
 				</div>
 			</div>
-			<a href="tel:7814848550" class="pmb-btn pmb-btn--navy pmb-btn--mt">Call Us Today</a>
+			<a href="tel:<?php echo esc_attr( pmb_active_phone_digits() ); ?>" class="pmb-btn pmb-btn--navy pmb-btn--mt">Call Us Today</a>
 		</div>
 
 		<!-- ── Photo carousel ──────────────────────────────── -->
@@ -236,7 +167,7 @@
 
 			<div class="pmb-svc-card">
 				<div class="pmb-svc-card__icon">
-					<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-DrainCleaning.png" alt="Drain Cleaning">
+					<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-DrainCleaning-Trans.png" alt="Drain Cleaning">
 				</div>
 				<h3>Drain Cleaning &amp; Camera</h3>
 				<p>Professional diagnosis and clearing of clogs, blockages, and sewage backups using camera inspection equipment.</p>
@@ -244,7 +175,7 @@
 
 			<div class="pmb-svc-card">
 				<div class="pmb-svc-card__icon">
-					<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-fixture-repairs-replacements.png" alt="Fixture Repairs">
+					<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-fixture-repairs-replacements-trans.png" alt="Fixture Repairs">
 				</div>
 				<h3>Fixture Repairs &amp; Replacements</h3>
 				<p>Faucets, valves, waterstops, tub spouts, toilets, and baseboard systems repaired or replaced right the first time.</p>
@@ -252,7 +183,7 @@
 
 			<div class="pmb-svc-card">
 				<div class="pmb-svc-card__icon">
-					<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-hvac.png" alt="HVAC">
+					<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-hvac-trans.png" alt="HVAC">
 				</div>
 				<h3>HVAC Services</h3>
 				<p>Repairs, maintenance, refrigerant recharging, and minisplit installations to keep your system at peak efficiency.</p>
@@ -260,7 +191,7 @@
 
 			<div class="pmb-svc-card">
 				<div class="pmb-svc-card__icon">
-					<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-boiler-services.png" alt="Boiler Services">
+					<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-boiler-services-trans.png" alt="Boiler Services">
 				</div>
 				<h3>Boiler Services</h3>
 				<p>Installation, maintenance, cleaning, and repair covering the complete lifespan of residential and commercial boilers.</p>
@@ -268,7 +199,7 @@
 
 			<div class="pmb-svc-card">
 				<div class="pmb-svc-card__icon">
-					<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-gas-propane.png" alt="Natural Gas &amp; Propane">
+					<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-gas-propane-trans.png" alt="Natural Gas &amp; Propane">
 				</div>
 				<h3>Natural Gas &amp; Propane</h3>
 				<p>Safe propane connections for outdoor grills and whole-home natural gas solutions installed to code.</p>
@@ -276,7 +207,7 @@
 
 			<div class="pmb-svc-card">
 				<div class="pmb-svc-card__icon">
-					<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-waterheater-services.png" alt="Water Heater Services">
+					<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/PMBoisvert-Plumbing-and-Mechanical-waterheater-services-trans.png" alt="Water Heater Services">
 				</div>
 				<h3>Water Heater Services</h3>
 				<p>Traditional and tankless water heater repairs, maintenance, replacements, and upgrades for every home.</p>
@@ -302,7 +233,7 @@
 		</div>
 		<div class="pmb-emergency__action">
 			<p>Day or night &mdash; we answer the phone.</p>
-			<a href="tel:7814848550" class="pmb-btn pmb-btn--orange pmb-btn--lg">
+			<a href="tel:<?php echo esc_attr( pmb_active_phone_digits() ); ?>" class="pmb-btn pmb-btn--orange pmb-btn--lg">
 				<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1.08h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
 				CALL NOW
 			</a>
@@ -317,7 +248,7 @@
 			<div class="pmb-eyebrow">Protect Your Home</div>
 			<h2 class="pmb-heading">Yearly Maintenance Plan</h2>
 			<p>One affordable plan keeps every major system in your home serviced, prioritized, and protected all year long.</p>
-			<a href="#contact" class="pmb-btn pmb-btn--navy pmb-btn--mt">Join the Plan</a>
+			<a href="#contact" class="pmb-btn pmb-btn--navy pmb-btn--mt" data-prefill-service="Maintenance Plan" data-prefill-message="I am interested in joining your Yearly Maintenance Plan">Join the Plan</a>
 		</div>
 		<div class="pmb-plan__benefits">
 			<div class="pmb-plan__item">
@@ -344,6 +275,17 @@
 		</div>
 	</div>
 </section>
+
+<!-- ═══════════════════════════════════════════════════ PHOTO STRIP -->
+<section class="pmb-photo-strip">
+	<div class="pmb-photo-strip__grid">
+		<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/Boiler-Install.webp" alt="Boiler installation">
+		<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/Water-Heater-Install.webp" alt="Water heater installation">
+		<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/Floor-Drain.jpg" alt="Floor drain">
+		<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/Floor-Drain-2.jpg" alt="Floor drain 2">
+		<img src="https://pmb.kelwynmanor.org/wp-content/uploads/2026/06/Expansion-Tank.jpg" alt="Expansion tank">
+	</div>
+</section><!-- .pmb-photo-strip -->
 
 <!-- ═══════════════════════════════════════════════════ REVIEWS -->
 <section id="reviews" class="pmb-reviews pmb-section">
@@ -382,11 +324,11 @@
 			<ul class="pmb-contact__details">
 				<li>
 					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1.08h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-					<a href="tel:7814848550">781-484-8550</a>
+					<a href="tel:<?php echo esc_attr( pmb_active_phone_digits() ); ?>"><?php echo esc_html( pmb_active_phone() ); ?></a>
 				</li>
 				<li>
 					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-					<a href="mailto:Pmboisvertplumbing@gmail.com">Pmboisvertplumbing@gmail.com</a>
+					<a href="mailto:<?php echo esc_attr( pmb_active_email() ); ?>"><?php echo esc_html( pmb_active_email() ); ?></a>
 				</li>
 				<li>
 					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -402,9 +344,7 @@
 			<?php if ( function_exists( 'wpforms_display' ) ) : ?>
 				<?php wpforms_display( 1, true, true ); ?>
 			<?php else : ?>
-			<form class="pmb-form" method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
-				<input type="hidden" name="action" value="pmb_contact">
-				<?php wp_nonce_field( 'pmb_contact_nonce', 'pmb_nonce' ); ?>
+			<form id="pmb-contact-form" class="pmb-form" novalidate>
 				<div class="pmb-form__row">
 					<div class="pmb-form__field">
 						<label for="pmb-name">Your Name</label>
@@ -438,6 +378,7 @@
 					<label for="pmb-message">Message</label>
 					<textarea id="pmb-message" name="pmb_message" rows="4" placeholder="Tell us about your project or issue&hellip;"></textarea>
 				</div>
+				<div class="pmb-form__msg" role="alert"></div>
 				<button type="submit" class="pmb-btn pmb-btn--orange pmb-btn--full">Send Message</button>
 			</form>
 			<?php endif; ?>
